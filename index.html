@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+</head>
+
+<body>
+    <form a>
+    <section class="section hero is-fullheight has-background-white-ter">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-two-fifths ">
+                <div class="tile is-parent ">
+                    <div class="tile is-child box is-4by3">
+                        <h1 class="title">
+                            Subnet Calculator
+                        </h1>
+
+
+                        <form>
+                        <div class="field">
+                            IP Address
+                            <div class="control">
+                                <input id="ip" required type="text" class="input" placeholder="IP Address">
+                            </div>
+                            <p class="help is-danger subtitle is-5" id="error"></p>
+                        </div>
+
+                        Prefix length
+                        <br>
+
+                        <div class="select">
+                            <select id="prefix" title="Prefix length">
+                                <option value="1 (9,223,372,036,854,775,808 networks /64)">1
+                                    (9,223,372,036,854,775,808 networks /64)</option>
+                                <option value="2 (4,611,686,018,427,387,904 networks /64)">2
+                                    (4,611,686,018,427,387,904 networks /64)</option>
+                                <option value="3 (2,305,843,009,213,693,952 networks /64)">3
+                                    (2,305,843,009,213,693,952 networks /64)</option>
+                                <option value="4 (1,152,921,504,606,846,976 networks /64)">4
+                                    (1,152,921,504,606,846,976 networks /64)</option>
+                                <option value="5 (576,460,752,303,423,488 networks /64)">5 (576,460,752,303,423,488
+                                    networks /64)</option>
+                                <option value="6 (288,230,376,151,711,744 networks /64)">6 (288,230,376,151,711,744
+                                    networks /64)</option>
+                                <option value="7 (144,115,188,075,855,872 networks /64)">7 (144,115,188,075,855,872
+                                    networks /64)</option>
+                                <option value="8 (72,057,594,037,927,936 networks /64)">8 (72,057,594,037,927,936
+                                    networks /64)</option>
+                                <option value="9 (36,028,797,018,963,968 networks /64)">9 (36,028,797,018,963,968
+                                    networks /64)</option>
+                                <option value="10 (18,014,398,509,481,984 networks /64)">10 (18,014,398,509,481,984
+                                    networks /64)</option>
+                                <option value="11 (9,007,199,254,740,992 networks /64)">11 (9,007,199,254,740,992
+                                    networks /64)</option>
+                                <option value="12 (4,503,599,627,370,496 networks /64)">12 (4,503,599,627,370,496
+                                    networks /64)</option>
+                                <option value="13 (2,251,799,813,685,248 networks /64)">13 (2,251,799,813,685,248
+                                    networks /64)</option>
+                                <option value="14 (1,125,899,906,842,624 networks /64)">14 (1,125,899,906,842,624
+                                    networks /64)</option>
+                                <option value="15 (562,949,953,421,312 networks /64)">15 (562,949,953,421,312
+                                    networks /64)</option>
+                                <option value="16 (281,474,976,710,656 networks /64)">16 (281,474,976,710,656
+                                    networks /64)</option>
+                                <option value="17 (140,737,488,355,328 networks /64)">17 (140,737,488,355,328
+                                    networks /64)</option>
+                                <option value="18 (70,368,744,177,664 networks /64)">18 (70,368,744,177,664
+                                    networks /64)</option>
+                                <option value="19 (35,184,372,088,832 networks /64)">19 (35,184,372,088,832
+                                    networks /64)</option>
+                                <option value="20 (17,592,186,044,416 networks /64)">20 (17,592,186,044,416
+                                    networks /64)</option>
+                                <option value="21 (8,796,093,022,208 networks /64)">21 (8,796,093,022,208 networks
+                                    /64)</option>
+                                <option value="22 (4,398,046,511,104 networks /64)">22 (4,398,046,511,104 networks
+                                    /64)</option>
+                                <option value="23 (2,199,023,255,552 networks /64)">23 (2,199,023,255,552 networks
+                                    /64)</option>
+                                <option value="24 (1,099,511,627,776 networks /64)">24 (1,099,511,627,776 networks
+                                    /64)</option>
+                                <option value="25 (549,755,813,888 networks /64)">25 (549,755,813,888 networks /64)</option>
+                                <option value="26 (274,877,906,944 networks /64)">26 (274,877,906,944 networks /64)</option>
+                                <option selected="" value="27 (137,438,953,472 networks /64)">27 (137,438,953,472
+                                    networks /64)</option>
+                                <option value="28 (68,719,476,736 networks /64)">28 (68,719,476,736 networks /64)</option>
+                                <option value="29 (34,359,738,368 networks /64)">29 (34,359,738,368 networks /64)</option>
+                                <option value="30 (17,179,869,184 networks /64)">30 (17,179,869,184 networks /64)</option>
+                                <option value="31 (8,589,934,592 networks /64)">31 (8,589,934,592 networks /64)</option>
+                                <option value="32 (4,294,967,296 networks /64)">32 (4,294,967,296 networks /64)</option>
+                                <option value="33 (2,147,483,648 networks /64)">33 (2,147,483,648 networks /64)</option>
+                                <option value="34 (1,073,741,824 networks /64)">34 (1,073,741,824 networks /64)</option>
+                                <option value="35 (536,870,912 networks /64)">35 (536,870,912 networks /64)</option>
+                                <option value="36 (268,435,456 networks /64)">36 (268,435,456 networks /64)</option>
+                                <option value="37 (134,217,728 networks /64)">37 (134,217,728 networks /64)</option>
+                                <option value="38 (67,108,864 networks /64)">38 (67,108,864 networks /64)</option>
+                                <option value="39 (33,554,432 networks /64)">39 (33,554,432 networks /64)</option>
+                                <option value="40 (16,777,216 networks /64)">40 (16,777,216 networks /64)</option>
+                                <option value="41 (8,388,608 networks /64)">41 (8,388,608 networks /64)</option>
+                                <option value="42 (4,194,304 networks /64)">42 (4,194,304 networks /64)</option>
+                                <option value="43 (2,097,152 networks /64)">43 (2,097,152 networks /64)</option>
+                                <option value="44 (1,048,576 networks /64)">44 (1,048,576 networks /64)</option>
+                                <option value="45 (524,288 networks /64)">45 (524,288 networks /64)</option>
+                                <option value="46 (262,144 networks /64)">46 (262,144 networks /64)</option>
+                                <option value="47 (131,072 networks /64)">47 (131,072 networks /64)</option>
+                                <option value="48 (65,536 networks /64)">48 (65,536 networks /64)</option>
+                                <option value="49 (32,768 networks /64)">49 (32,768 networks /64)</option>
+                                <option value="50 (16,384 networks /64)">50 (16,384 networks /64)</option>
+                                <option value="51 (8,192 networks /64)">51 (8,192 networks /64)</option>
+                                <option value="52 (4,096 networks /64)">52 (4,096 networks /64)</option>
+                                <option value="53 (2,048 networks /64)">53 (2,048 networks /64)</option>
+                                <option value="54 (1,024 networks /64)">54 (1,024 networks /64)</option>
+                                <option value="55 (512 networks /64)">55 (512 networks /64)</option>
+                                <option value="56 (256 networks /64)">56 (256 networks /64)</option>
+                                <option value="57 (128 networks /64)">57 (128 networks /64)</option>
+                                <option value="58 (64 networks /64)">58 (64 networks /64)</option>
+                                <option value="59 (32 networks /64)">59 (32 networks /64)</option>
+                                <option value="60 (16 networks /64)">60 (16 networks /64)</option>
+                                <option value="61 (8 networks /64)">61 (8 networks /64)</option>
+                                <option value="62 (4 networks /64)">62 (4 networks /64)</option>
+                                <option value="63 (2 networks /64)">63 (2 networks /64)</option>
+                                <option value="64 (18,446,744,073,709,551,616 addresses)">64
+                                    (18,446,744,073,709,551,616 addresses)</option>
+                                <option value="65 (9,223,372,036,854,775,808 addresses)">65
+                                    (9,223,372,036,854,775,808 addresses)</option>
+                                <option value="66 (4,611,686,018,427,387,904 addresses)">66
+                                    (4,611,686,018,427,387,904 addresses)</option>
+                                <option value="67 (2,305,843,009,213,693,952 addresses)">67
+                                    (2,305,843,009,213,693,952 addresses)</option>
+                                <option value="68 (1,152,921,504,606,846,976 addresses)">68
+                                    (1,152,921,504,606,846,976 addresses)</option>
+                                <option value="69 (576,460,752,303,423,488 addresses)">69 (576,460,752,303,423,488
+                                    addresses)</option>
+                                <option value="70 (288,230,376,151,711,744 addresses)">70 (288,230,376,151,711,744
+                                    addresses)</option>
+                                <option value="71 (144,115,188,075,855,872 addresses)">71 (144,115,188,075,855,872
+                                    addresses)</option>
+                                <option value="72 (72,057,594,037,927,936 addresses)">72 (72,057,594,037,927,936
+                                    addresses)</option>
+                                <option value="73 (36,028,797,018,963,968 addresses)">73 (36,028,797,018,963,968
+                                    addresses)</option>
+                                <option value="74 (18,014,398,509,481,984 addresses)">74 (18,014,398,509,481,984
+                                    addresses)</option>
+                                <option value="75 (9,007,199,254,740,992 addresses)">75 (9,007,199,254,740,992
+                                    addresses)</option>
+                                <option value="76 (4,503,599,627,370,496 addresses)">76 (4,503,599,627,370,496
+                                    addresses)</option>
+                                <option value="77 (2,251,799,813,685,248 addresses)">77 (2,251,799,813,685,248
+                                    addresses)</option>
+                                <option value="78 (1,125,899,906,842,624 addresses)">78 (1,125,899,906,842,624
+                                    addresses)</option>
+                                <option value="79 (562,949,953,421,312 addresses)">79 (562,949,953,421,312
+                                    addresses)</option>
+                                <option value="80 (281,474,976,710,656 addresses)">80 (281,474,976,710,656
+                                    addresses)</option>
+                                <option value="81 (140,737,488,355,328 addresses)">81 (140,737,488,355,328
+                                    addresses)</option>
+                                <option value="82 (70,368,744,177,664 addresses)">82 (70,368,744,177,664 addresses)</option>
+                                <option value="83 (35,184,372,088,832 addresses)">83 (35,184,372,088,832 addresses)</option>
+                                <option value="84 (17,592,186,044,416 addresses)">84 (17,592,186,044,416 addresses)</option>
+                                <option value="85 (8,796,093,022,208 addresses)">85 (8,796,093,022,208 addresses)</option>
+                                <option value="86 (4,398,046,511,104 addresses)">86 (4,398,046,511,104 addresses)</option>
+                                <option value="87 (2,199,023,255,552 addresses)">87 (2,199,023,255,552 addresses)</option>
+                                <option value="88 (1,099,511,627,776 addresses)">88 (1,099,511,627,776 addresses)</option>
+                                <option value="89 (549,755,813,888 addresses)">89 (549,755,813,888 addresses)</option>
+                                <option value="90 (274,877,906,944 addresses)">90 (274,877,906,944 addresses)</option>
+                                <option value="91 (137,438,953,472 addresses)">91 (137,438,953,472 addresses)</option>
+                                <option value="92 (68,719,476,736 addresses)">92 (68,719,476,736 addresses)</option>
+                                <option value="93 (34,359,738,368 addresses)">93 (34,359,738,368 addresses)</option>
+                                <option value="94 (17,179,869,184 addresses)">94 (17,179,869,184 addresses)</option>
+                                <option value="95 (8,589,934,592 addresses)">95 (8,589,934,592 addresses)</option>
+                                <option value="96 (4,294,967,296 addresses)">96 (4,294,967,296 addresses)</option>
+                                <option value="97 (2,147,483,648 addresses)">97 (2,147,483,648 addresses)</option>
+                                <option value="98 (1,073,741,824 addresses)">98 (1,073,741,824 addresses)</option>
+                                <option value="99 (536,870,912 addresses)">99 (536,870,912 addresses)</option>
+                                <option value="100 (268,435,456 addresses)">100 (268,435,456 addresses)</option>
+                                <option value="101 (134,217,728 addresses)">101 (134,217,728 addresses)</option>
+                                <option value="102 (67,108,864 addresses)">102 (67,108,864 addresses)</option>
+                                <option value="103 (33,554,432 addresses)">103 (33,554,432 addresses)</option>
+                                <option value="104 (16,777,216 addresses)">104 (16,777,216 addresses)</option>
+                                <option value="105 (8,388,608 addresses)">105 (8,388,608 addresses)</option>
+                                <option value="106 (4,194,304 addresses)">106 (4,194,304 addresses)</option>
+                                <option value="107 (2,097,152 addresses)">107 (2,097,152 addresses)</option>
+                                <option value="108 (1,048,576 addresses)">108 (1,048,576 addresses)</option>
+                                <option value="109 (524,288 addresses)">109 (524,288 addresses)</option>
+                                <option value="110 (262,144 addresses)">110 (262,144 addresses)</option>
+                                <option value="111 (131,072 addresses)">111 (131,072 addresses)</option>
+                                <option value="112 (65,536 addresses)">112 (65,536 addresses)</option>
+                                <option value="113 (32,768 addresses)">113 (32,768 addresses)</option>
+                                <option value="114 (16,384 addresses)">114 (16,384 addresses)</option>
+                                <option value="115 (8,192 addresses)">115 (8,192 addresses)</option>
+                                <option value="116 (4,096 addresses)">116 (4,096 addresses)</option>
+                                <option value="117 (2,048 addresses)">117 (2,048 addresses)</option>
+                                <option value="118 (1,024 addresses)">118 (1,024 addresses)</option>
+                                <option value="119 (512 addresses)">119 (512 addresses)</option>
+                                <option value="120 (256 addresses)">120 (256 addresses)</option>
+                                <option value="121 (128 addresses)">121 (128 addresses)</option>
+                                <option value="122 (64 addresses)">122 (64 addresses)</option>
+                                <option value="123 (32 addresses)">123 (32 addresses)</option>
+                                <option value="124 (16 addresses)">124 (16 addresses)</option>
+                                <option value="125 (8 addresses)">125 (8 addresses)</option>
+                                <option value="126 (4 addresses)">126 (4 addresses)</option>
+                                <option value="127 (2 addresses)">127 (2 addresses)</option>
+                                <option value="128 (1 address)">128 (1 address)</option>
+                            </select>
+                            <br>
+
+                            <div class="field">
+                                <a class="button is-primary " type="button" onClick="JavaScript:return check();">
+                                    Calculate </a>
+                            </div>
+                        </form>
+
+
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    </div>
+  
+   <script language="javascript">
+
+
+
+        function check() {
+
+            // console.log(document.getElementById("id"));
+
+            if (document.getElementById("ip") === "") {
+
+              
+
+
+                return false;
+
+            }
+
+           
+            else
+
+                return true;
+
+        }
+
+
+
+    </script>
+</body>
+
+
+
+</html>
